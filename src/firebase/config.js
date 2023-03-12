@@ -4,7 +4,6 @@ import 'firebase/auth'
 
 import 'firebase/storage'//voor uploaden profile images
 
-Y
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
