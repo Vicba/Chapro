@@ -1,0 +1,27 @@
+.create-form {
+    max-width: auto;
+}
+
+.create-form h2 {
+    margin-bottom: 20px;
+}
+
+.form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.row label {
+    width: 40%;
+}
+
+.row input {
+    width: 100%;
+}

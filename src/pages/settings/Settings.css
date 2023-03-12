@@ -1,0 +1,11 @@
+.form-settings fieldset {
+    border: none;
+    background: #fff;
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.updateBtn {
+    margin-bottom: 50px;
+}
