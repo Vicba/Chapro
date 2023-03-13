@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 //styles
 import './Signup.css'
@@ -33,7 +34,6 @@ export default function Signup() {
 
         setThumbnailError(null)
         setThumbnail(selected)
-        console.log("thumbnail uploaded")
     }
 
     const handleSubmit = (e) => {
@@ -47,29 +47,29 @@ export default function Signup() {
             <h2>Sign up</h2>
 
             <label>
-                <span>Email:</span>
+                <span>Email*:</span>
                 <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} required />
             </label>
 
             <label>
-                <span>Password:</span>
+                <span>Password*:</span>
                 <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} required />
             </label>
 
             <label>
-                <span>Username:</span>
+                <span>Username*:</span>
                 <input type="text" onChange={(e) => setDisplayName(e.target.value)} value={displayName} required />
             </label>
 
             <label>
-                <span>profile picture:</span>
+                <span>profile picture*:</span>
                 <input type="file" onChange={handleFileChange} required />
                 {thumbnailError && <div className="error">{thumbnailError}</div>}
             </label>
             {!isPending && <button className="btn">Sign up</button>}
             {isPending && <button className="btn" disabled>loading</button>}
-
-            {error && <div className='error'>{error}</div>}
+            {error && <div className='error'>{error}</div>}<br /><br />
+            <Link to='/signup'>Already have an account? Login here!</Link>
         </form>
     )
 }

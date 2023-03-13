@@ -38,7 +38,7 @@ export default function Login() {
             </label>
             {!isPending && <button className="btn">Log in</button>}
             {isPending && <button className="btn" disabled>loading</button>}
-            {error && <div className="error">{error}</div>}<br />
+            {error && <div className="error">{error}</div>}<br /><br />
             <Link to='/signup'>No account yet? Register here!</Link>
         </form>
     )
