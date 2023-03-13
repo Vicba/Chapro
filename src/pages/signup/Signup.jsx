@@ -62,9 +62,9 @@ export default function Signup() {
             </label>
 
             <label>
-                <span>profile picture:</span>
+                <span>profile picture*:</span>
                 <p>File size has to be smaller then 100kb</p>
-                <input type="file" onChange={handleFileChange} />
+                <input type="file" onChange={handleFileChange} required />
                 {thumbnailError && <div className="error">{thumbnailError}</div>}
             </label>
             {!isPending && <button className="btn">Sign up</button>}
