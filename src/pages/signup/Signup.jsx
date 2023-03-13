@@ -69,7 +69,7 @@ export default function Signup() {
             {!isPending && <button className="btn">Sign up</button>}
             {isPending && <button className="btn" disabled>loading</button>}
             {error && <div className='error'>{error}</div>}<br /><br />
-            <Link to='/signup'>Already have an account? Login here!</Link>
+            <Link to='/login'>Already have an account? Login here!</Link>
         </form>
     )
 }
