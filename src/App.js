@@ -36,8 +36,8 @@ function App() {
               <Route path="/friends" element={user ? <Friends /> : <Navigate to="/login" />} />
               <Route path="/settings" element={user ? <Settings /> : <Navigate to="/login" />} />
               <Route path="/projects/:id" element={user ? <Project /> : <Navigate to="/login" />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={!user ? <Signup /> : <Navigate to="/" />} />
+              <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" />} />
             </Routes>
           </div>
 
