@@ -12,9 +12,15 @@ To Start Server:
 
 `npm start`
 
-To Visit App:
+To Visit App after start:
 
 `localhost:3000/`  
+
+## Features for the future 
+- making friends
+- find users by searchbar 
+- see bio of users
+- seeing deleted projects
 
 
 ## Contributing
