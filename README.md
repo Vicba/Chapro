@@ -26,6 +26,7 @@ To Visit App after start:
 `localhost:3000/`  
 
 ## Features for the future 
+- login with google
 - making friends
 - find users by searchbar 
 - see bio of users
