@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Chapro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chapro is software for project task management. This project came to my mind because I never found good free project management software myself that I could share with my friends. When creating a task in Chapro you can add friends/colleagues and each task has a property that can include: frontend, backend, UX/UI, ML, ...
 
-## Available Scripts
+## Images
+<img src="https://user-images.githubusercontent.com/47187122/228638272-2d159936-072f-487f-ad72-38e006f265c8.png"  width="475" height="250"> &emsp; 
+<img src="https://user-images.githubusercontent.com/47187122/228638333-6dad491a-11ff-4066-a0ca-1ec3f7c43119.png"  width="475" height="250">
 
-In the project directory, you can run:
+<img src="https://user-images.githubusercontent.com/47187122/228638389-d3e58e54-fde6-437a-b033-3ae50c26e59a.png"  width="475" height="250"> &emsp; 
+<img src="https://user-images.githubusercontent.com/47187122/228638457-c5723003-61d4-49ab-b2cc-f35dade2d24f.png"  width="475" height="250">
 
-### `npm start`
+<img src="https://user-images.githubusercontent.com/47187122/228638485-c0a16fc7-6ec6-438d-beb8-08bf45ecf1e5.png"  width="475" height="250">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`npm install` 
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To Start Server:
 
-### `npm run build`
+`npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To Visit App after start:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`localhost:3000/`  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features for the future 
+- login with google
+- making friends
+- find users by searchbar 
+- see bio of users
+- seeing deleted projects
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
