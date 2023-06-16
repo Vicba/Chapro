@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Chapro/static/css/main.c9bc7530.css",
-    "main.js": "/Chapro/static/js/main.7b71e678.js",
+    "main.js": "/Chapro/static/js/main.55b3a55d.js",
     "static/media/settings.svg": "/Chapro/static/media/settings.67afd3a2d9a6d4828d845d198579e3e5.svg",
     "index.html": "/Chapro/index.html",
     "static/media/dashboard_icon.svg": "/Chapro/static/media/dashboard_icon.bc800f3b9286b71005c3f026ebfaa958.svg",
     "static/media/add_icon.svg": "/Chapro/static/media/add_icon.376e9b6a44e5b3142f1239a3cc8504d0.svg",
     "main.c9bc7530.css.map": "/Chapro/static/css/main.c9bc7530.css.map",
-    "main.7b71e678.js.map": "/Chapro/static/js/main.7b71e678.js.map"
+    "main.55b3a55d.js.map": "/Chapro/static/js/main.55b3a55d.js.map"
   },
   "entrypoints": [
     "static/css/main.c9bc7530.css",
-    "static/js/main.7b71e678.js"
+    "static/js/main.55b3a55d.js"
   ]
 }
