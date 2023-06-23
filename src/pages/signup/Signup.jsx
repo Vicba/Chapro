@@ -1,76 +1,121 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Resizer } from "react-image-file-resizer";
 
 //styles
-import './Signup.css'
+import "./Signup.css";
 
-import { useSignup } from '../../hooks/useSignup'
+import { useSignup } from "../../hooks/useSignup";
 
 export default function Signup() {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [displayName, setDisplayName] = useState("")
-    const [thumbnail, setThumbnail] = useState(null)
-    const [thumbnailError, setThumbnailError] = useState(null)
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [displayName, setDisplayName] = useState("");
+  const [thumbnail, setThumbnail] = useState(null);
+  const [thumbnailError, setThumbnailError] = useState(null);
 
-    const { signup, error, isPending } = useSignup()
+  const { signup, error, isPending } = useSignup();
 
-    const handleFileChange = (e) => {
-        setThumbnail(null)
+  const resizeFile = (file) =>
+    new Promise((resolve) => {
+      Resizer.imageFileResizer(
+        file,
+        300,
+        300,
+        "JPEG",
+        100,
+        0,
+        (uri) => {
+          resolve(uri);
+        },
+        "base64"
+      );
+    });
 
-        let selected = e.target.files[0]
-        if (!selected) {
-            setThumbnailError("please select a file")
-            return
-        }
-        if (!selected.type.includes("image")) {
-            setThumbnailError("selected file must be an image")
-            return
-        }
-        if (selected.size > 100000) {
-            setThumbnailError("image file size must be less than 100kb")
-            return
-        }
+  const handleFileChange = async (e) => {
+    setThumbnail(null);
 
-        setThumbnailError(null)
-        setThumbnail(selected)
+    let selected = e.target.files[0];
+    if (!selected) {
+      setThumbnailError("please select a file");
+      return;
+    }
+    if (!selected.type.includes("image")) {
+      setThumbnailError("selected file must be an image");
+      return;
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    // if (selected.size > 100000) {
+    //   try {
+    //     const image = await resizeFile(selected);
+    //     setThumbnail(image);
+    //   } catch (err) {
+    //     console.log(err);
+    //     setThumbnailError("Image file size is still too large");
+    //   }
+    //   return;
+    // }
 
-        signup(email, password, displayName, thumbnail)
-    }
+    setThumbnailError(null);
+    setThumbnail(selected);
+  };
 
-    return (
-        <form className='auth-form' onSubmit={handleSubmit}>
-            <h2>Sign up</h2>
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-            <label>
-                <span>Email*:</span>
-                <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} required />
-            </label>
+    signup(email, password, displayName, thumbnail);
+  };
 
-            <label>
-                <span>Password*:</span>
-                <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} required />
-            </label>
+  return (
+    <form className="auth-form" onSubmit={handleSubmit}>
+      <h2>Sign up</h2>
 
-            <label>
-                <span>Username*:</span>
-                <input type="text" onChange={(e) => setDisplayName(e.target.value)} value={displayName} required />
-            </label>
+      <label>
+        <span>Email*:</span>
+        <input
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          required
+        />
+      </label>
 
-            <label>
-                <span>profile picture*:</span>
-                <p>File size has to be smaller then 100kb</p>
-                <input type="file" onChange={handleFileChange} required />
-                {thumbnailError && <div className="error">{thumbnailError}</div>}
-            </label>
-            {!isPending && <button className="btn">Sign up</button>}
-            {isPending && <button className="btn" disabled>loading</button>}
-            {error && <div className='error'>{error}</div>}<br /><br />
-            <Link to='/login'>Already have an account? Login here!</Link>
-        </form>
-    )
+      <label>
+        <span>Password*:</span>
+        <input
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+          required
+        />
+      </label>
+
+      <label>
+        <span>Username*:</span>
+        <input
+          type="text"
+          onChange={(e) => setDisplayName(e.target.value)}
+          value={displayName}
+          required
+        />
+      </label>
+
+      <label>
+        <span>profile picture*:</span>
+        <p>File size has to be smaller then 100kb</p>
+        <input type="file" onChange={handleFileChange} required />
+        {thumbnailError && <div className="error">{thumbnailError}</div>}
+      </label>
+      {!isPending && <button className="btn">Sign up</button>}
+      {isPending && (
+        <button className="btn" disabled>
+          loading
+        </button>
+      )}
+      {error && <div className="error">{error}</div>}
+      <br />
+      <br />
+      <Link to="/login">Already have an account? Login here!</Link>
+    </form>
+  );
 }
