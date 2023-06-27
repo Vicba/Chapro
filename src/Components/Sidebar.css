@@ -1,70 +1,76 @@
 .sidebar {
-    width: 250px;
-    min-width: 250px;
-    background: #649DAD;
-    min-height: 100vh;
-    box-sizing: border-box;
-    position: relative;
-    color: #fff;
+  width: 250px;
+  min-width: 250px;
+  background: #649dad;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
 }
 
 .sidebar-content {
-    position: fixed;
-    width: inherit;
+  position: fixed;
+  width: inherit;
 }
 
 .sidebar .user {
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 30px 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-around;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 30px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
 }
 
 .sidebar .logo {
-    height: auto;
-    width: 100px;
+  height: auto;
+  width: 100px;
 }
 
 .sidebar .links {
-    margin-top: 80px;
-    margin-left: 20px;
+  margin-top: 80px;
+  margin-left: 20px;
 }
 
 .sidebar .links li {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .sidebar .links a {
-    display: flex;
-    padding: 10px;
-    text-decoration: none;
-    width: 100%;
-    color: #fff;
-    box-sizing: border-box;
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .sidebar .links img {
-    margin-right: 10px;
-    filter: invert(100%);
+  margin-right: 10px;
+  filter: invert(100%);
 }
 
 .sidebar .links a.active {
-    color: #555;
-    background: var(--bg-color);
-    border-radius: 20px 0 0 20px;
+  color: #555;
+  background: var(--bg-color);
+  border-radius: 20px 0 0 20px;
 }
 
 .sidebar .links .active img {
-    filter: invert(40%);
+  filter: invert(40%);
 }
 
 .settings-img {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
 }

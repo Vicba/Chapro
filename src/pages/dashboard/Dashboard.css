@@ -1,34 +1,58 @@
 .project-filter {
-    margin: 30px auto;
+  margin: 30px auto;
+  overflow-x: hidden; /* Added property to hide horizontal scrollbar */
 }
 
 .project-filter nav {
-    display: flex;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 4px;
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .project-filter p {
-    font-size: 0.9em;
-    margin-right: 10px;
+  font-size: 0.9em;
+  margin-right: 10px;
 }
 
 .project-filter button {
-    background: transparent;
-    border: 0;
-    font-family: inherit;
-    font-weight: bold;
-    color: var(--text-color);
-    cursor: pointer;
-    border-right: 1px solid #e4e4e4;
-    font-size: 0.9em;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  border-right: 1px solid #e4e4e4;
+  font-size: 0.9em;
 }
 
 .project-filter button:last-child {
-    border: 0;
+  border: 0;
 }
 
 .project-filter button.active {
-    color: #000;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+  .project-filter {
+    margin: 20px auto;
+  }
+
+  .project-filter nav {
+    flex-direction: column;
+  }
+
+  .project-filter button {
+    border-right: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
